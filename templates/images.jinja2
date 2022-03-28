@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Files</title>
+</head>
+<body>
+    <h1>Here are all the image files using Jinja Templating:</h1>
+    <ol>
+        {% for image in images %}
+            <li>{{ image }}</li>
+        {% endfor %}
+    </ol>
+
+    <script>
+
+        var images = {{ images|tojson }};
+
+        console.log("Here are the images using JS: ");
+        console.table(images);
+
+    </script>
+</body>
+</html>
